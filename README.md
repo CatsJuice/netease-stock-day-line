@@ -1,7 +1,7 @@
 # netease-stock-day-line
 Python爬虫抓取网易财经日线
 
-**下载： **
+**下载：**
 - download .zip to local
 - `git clone https://github.com/CatsJuice/netease-stock-day-line.git`
 
