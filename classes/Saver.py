@@ -27,13 +27,13 @@ class Saver(object):
         for code in codeList:
             http.client.HTTPConnection._http_vsn = 10
             http.client.HTTPConnection._http_vsn_str = 'HTTP/1.0'
-            print('正在获取股票%s数据' % code[1:-1])
-            url = 'http://quotes.money.163.com/service/chddata.html?code=%s&end=%s&fields=TCLOSE;HIGH;LOW;TOPEN;LCLOSE;CHG;PCHG;TURNOVER;VOTURNOVER;VATURNOVER;TCAP;MCAP' % (code,date)
-            urllib.request.urlretrieve(url, filepath+code[1:-1]+'.csv')
+            print('正在获取股票%s数据' % code[1:])
+            url = 'http://quotes.money.163.com/service/chddata.html?code=%s&end=%s&fields=TCLOSE;HIGH;LOW;TOPEN;LCLOSE;CHG;PCHG;TURNOVER;VOTURNOVER;VATURNOVER;TCAP;MCAP' % (code, date)
+            urllib.request.urlretrieve(url, filepath+code[1:]+'.csv')
             # r = requests.get(url)
             # with open(filepath+code+'.csv', "wb") as content:
             #     content.write(r.content)
-            time.sleep(random.random() * 2)
+            time.sleep(random.random() * 1)
 
     # 存日线到MySQL
     def saveKlineToMySQL(self, filepath):

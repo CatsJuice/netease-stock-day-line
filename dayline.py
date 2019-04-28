@@ -26,11 +26,11 @@ class Controller(object):
 
     # 执行函数
     def start(self):
-        page = 1
+        page = 6
         all_code = []
         while page <= 181:
             print("当前为第%s页" % page)
-            time.sleep(random.random()*2)
+            time.sleep(random.random())
             self.downloader = Downloader(self.url % page)
             page += 1
             html_content = self.downloader.download()
@@ -43,7 +43,7 @@ class Controller(object):
         self.save(codelist=all_code)
 
     def save(self,codelist):
-        self.saver.saveCodeListToCSV(codeList=codelist, filepath=self.codelist_filepath)  # 保存代码到csv
+        self.saver.saveCodeListToCSV(codeList=codelist, filepath=self.codelist_filepath)    # 保存代码到csv
         # self.saver.saveKlineToMySQL(filepath=self.kline_filepath)                         # 保存所有股票的信息到数据库
 
 
