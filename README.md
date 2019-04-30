@@ -12,3 +12,13 @@ Python爬虫抓取网易财经日线
 **使用：**
 
 运行`dayline.py`
+
+**目录结构说明：**
+
+- classes
+    - DbManage.py    // 数据库连接类
+    - Downloader.py  // 下载器
+    - Parser.py      // 解析器
+    - Saver.py       // 存储器
+- dayline.py: 抓取网易财经日线
+- tushare_minute_data.py ： tushare分时数据抓取

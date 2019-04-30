@@ -5,7 +5,7 @@ class DbManager(object):
 
     def __init__(self):
         self.name = "root"
-        self.passsword = "98981010asd"
+        self.passsword = ""
         self.conn = None
         self.db = None
 
